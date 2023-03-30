@@ -1,9 +1,9 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo1 
+  name: demo-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: demo
@@ -13,7 +13,9 @@ spec:
         app: demo
     spec:
       containers:
-        - name: demo 
-          image: shraddhapa/demo22
-          ports:
-          - containerPort: 80
+      - name: demo-container
+        image: docker.io/library/demo:latest
+        ports:
+        - containerPort: 3000
+        command: ["python3", "index.py"]
+
