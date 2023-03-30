@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: demo 
-          image: img1/demo
+          image: shraddhapa/demo22
           ports:
           - containerPort: 80
