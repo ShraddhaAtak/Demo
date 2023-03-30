@@ -8,9 +8,16 @@ pipeline {
     {
       steps {
         echo "deploying the application"    
-        sh "docker build -t img1 ." 
+        sh "docker build -t demopip ." 
       }
     }
+    stage('Push') {
+            steps {
+                echo 'Pushing image..'
+                sh 'echo docker login -u shraddhapa --password-Kalyani@95'
+                sh 'docker push demopip:latest'
+            }
+        }
      stage('Deploy') {
             steps {
                 echo 'Deploying....'
