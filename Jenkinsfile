@@ -16,7 +16,6 @@ pipeline {
                 echo 'Pushing image..'
                 sh 'echo docker login -u shraddhapa --password-Kalyani@95'
                 sh 'docker push shraddhapa/demo22:latest'
-'
             }
         }
      stage('Deploy') {
