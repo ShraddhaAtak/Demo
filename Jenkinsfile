@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_HUB_REPO = "shraddhapa/demo22"
-        CONTAINER_NAME = "demo22"
+        DOCKER_HUB_REPO = "shraddhapa/minnikube"
+        CONTAINER_NAME = "minikube"
         DOCKERHUB_CREDENTIALS=credentials('dockerhub-credentials')
     }
     
