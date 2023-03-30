@@ -2,6 +2,9 @@ pipeline {
   agent any
   environment {
       PATH="/opt/anaconda/bin/conda:$PATH"
+         DOCKER_HUB_REPO = "shraddhapa/demo22"
+        CONTAINER_NAME = "demo22"
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub-credentials')
   }
   stages {  
     stage('Build')
