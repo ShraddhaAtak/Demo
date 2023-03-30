@@ -8,14 +8,14 @@ pipeline {
     {
       steps {
         echo "deploying the application"    
-        sh "docker build -t demopip ." 
+        sh "docker build -t demo22 ." 
       }
     }
     stage('Push') {
             steps {
                 echo 'Pushing image..'
                 sh 'echo docker login -u shraddhapa --password-Kalyani@95'
-                sh 'docker push demopip:latest'
+                sh 'docker push demo22:latest'
             }
         }
      stage('Deploy') {
